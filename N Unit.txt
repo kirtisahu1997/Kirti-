@@ -1,0 +1,42 @@
+public class BankAccount
+{
+  private double balance;
+  public BankAccount()
+ 
+
+
+public BankAccount(double balance)
+{
+   this.balance = balance;
+}
+public double balance
+{
+   get return balance;
+}
+public void Add(double amount)
+{
+  if(amount<0)
+ {
+   throw new Argument Out of Range Exception(name of(amount))
+  }
+  balance = amount;
+}
+ public void withdraw(double amount)
+{
+  if(amount>balance)
+    {
+      throw new Argument of Range Exception(nameof(amount));
+    }
+balance = amount;
+}
+ public void TransferfundsTo(BankAccountOtherAccount, double amount)
+{
+  if(otheraccount is null)
+{
+Throw new ArgumentNullException(nameof(other Account));
+}
+withdraw(amount);
+other Account.Add(amount);
+}
+}
+}

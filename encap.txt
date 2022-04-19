@@ -1,0 +1,223 @@
+﻿using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;  namespace oopsconcept
+
+{​​​​​
+
+    abstract class Bank // abstraction
+
+    {​​​​​
+
+        public string name;
+
+        public double interest;
+
+        public string address;
+
+        public abstract void Printdetails();
+
+    }​​​​​      class Holder1 : Bank // inheritance
+
+    {​​​​​
+
+        public int id1;
+
+        public string phno1; public int P;
+
+        public double R;
+
+        public double T; public override void Printdetails()
+
+        {​​​​​
+
+            string name = this.name;
+
+            Console.WriteLine("First holder name is : {​​​​​0}​​​​​", name);
+
+            Console.WriteLine("Interest is : {​​​​​0}​​​​​", this.interest);
+
+            Console.WriteLine("First holder address is : {​​​​​0}​​​​​", this.address);
+
+            Console.WriteLine("First holder customer id is : {​​​​​0}​​​​​", this.id1);
+
+            Console.WriteLine("First holder's phone no is : {​​​​​0}​​​​​", this.phno1); Console.WriteLine("Simple Interest is : {​​​​​0}​​​​​", (this.P * this.R * this.T) / 100);
+
+        }​​​​​  
+
+        public int loanamount() // polymorphism overloading
+
+        {​​​​​
+
+            return 2 * 10000;
+
+        }​​​​​           public double loanamount(int Lamount, double rate)
+
+        {​​​​​
+
+            return Lamount * rate;
+
+        }​​​​​           public double loanamount(double a, double b, int c)
+
+        {​​​​​
+
+            return a * b * c;
+
+        }​​​​​  
+
+    }​​​​​      class Holder2 : Bank
+
+    {​​​​​
+
+        public int id2;
+
+        public string phno2; public override void Printdetails()
+
+        {​​​​​
+
+            Console.WriteLine("Second holder name is : {​​​​​0}​​​​​", name);
+
+            Console.WriteLine("Interest is : {​​​​​0}​​​​​", this.interest);
+
+            Console.WriteLine("Second holder address is : {​​​​​0}​​​​​", this.address);
+
+            Console.WriteLine("Second holder customer id is : {​​​​​0}​​​​​", this.id2);
+
+            Console.WriteLine("Second holder's phone no is : {​​​​​0}​​​​​", this.phno2);
+
+        }​​​​​
+
+    }​​​​​ }​​​​​
+
+[11:23 AM] Sana Sheikh
+encap.cs
+
+[11:24 AM] Sana Sheikh
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;  namespace oopsconcept
+
+{​​​​​
+
+    class encap
+    {​​​​​
+
+        private int a;
+
+        private int b;
+
+        public int add
+
+        {​​​​​
+
+            get
+
+            {​​​​​
+
+                return a + b;
+
+            }​​​​​
+
+            set
+
+            {​​​​​
+
+                a = value;
+
+                b = value;
+
+            }​​​​​
+
+        }​​​​​          public int sub
+
+        {​​​​​
+
+            get
+
+            {​​​​​
+
+                return a - b;
+
+            }​​​​​
+
+            set
+
+            {​​​​​
+
+                a = value;
+
+                b = value;
+
+            }​​​​​
+
+        }​​​​​
+
+    }​​​​​
+
+}​​​​​
+
+[11:37 AM] Sana Sheikh
+OOPs Concept with nunit
+
+[11:37 AM] Sana Sheikh
+encap.cs
+
+[11:37 AM] Sana Sheikh
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+using NUnit.Framework; namespace nunit1
+
+{​​​​​
+
+    [TestFixture]
+
+    class encap 
+
+    {​​​​​         [Test]
+
+        public void add()
+
+        {​​​​​
+
+            math M = new math();
+
+            Assert.AreEqual(31, M.add(20, 11));
+
+        }​​​​​ 
+
+        [TestCase]
+
+        public void sub()
+
+        {​​​​​
+
+            math M = new math();
+
+            Assert.AreEqual(10, M.sub(20, 10));
+
+        }​​​​​         
+
+    }​​​​​
+
+}​​​​​
+
+
